@@ -16,9 +16,9 @@ See `requirement.txt` for other details of the operating environment.
 
 Note that for `opencv-python`, this code has only tried the version provided above. Using an excessively high version may cause errors.
 
-## Dataset: mcSR
+## Dataset: bcSR
 
-We have provided a `BaiduYun` download for the dataset mcSR used in the paper:
+We have provided a `BaiduYun` download for the dataset bcSR used in the paper:
 
 https://pan.baidu.com/s/1gP9TNLh2Drw-Duz_KL5-Hw  
 password: m1qt
@@ -106,3 +106,6 @@ This code does not provide a scheme to use other data for training, and all mult
   * Updated `How to test CARN?`: provide more details for the testing of this code;
   * Updated `Benchmark results in paper`: show the results in the paper;
   * Updated `Information of comparison model`: provide information about the comparison model used in the paper.
+
+* 2022.8.25
+  * Modify the dataset name: from `mcSR` to `bcSR` 
