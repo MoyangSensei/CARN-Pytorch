@@ -108,4 +108,5 @@ This code does not provide a scheme to use other data for training, and all mult
   * Updated `Information of comparison model`: provide information about the comparison model used in the paper.
 
 * 2022.8.25
-  * Modify the dataset name: from `mcSR` to `bcSR` 
+  * Modify the dataset name: from `mcSR` to `bcSR`; 
+  * Updated images of benchmark results.
