@@ -43,7 +43,7 @@ See the commmand in `run.sh`. In fact, you only need to add some parameters to t
 
 ![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/2.png)
 
-![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/3.png)
+![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/33.png)
 
 ## Information of comparison model
 
