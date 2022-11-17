@@ -2,7 +2,7 @@
 
 This repository is an official PyTorch implementation of the paper **"A Super-Resolution Network Using Channel Attention Retention for Pathology Images"**.
 
-![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/1.png)
+![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/11.png)
 
 ## Requirement
 * torch == 1.8.0
@@ -18,14 +18,20 @@ Note that for `opencv-python`, this code has only tried the version provided abo
 
 ## Dataset: bcSR
 
-We have provided a `BaiduYun` download for the dataset bcSR used in the paper:
+We have provided 3 urls for bcSR:
+
+`BaiduYun`:
 
 https://pan.baidu.com/s/1gP9TNLh2Drw-Duz_KL5-Hw  
 password: m1qt
 
-We also provide `Google Drive` download:
+`Google Drive`:
 
 https://drive.google.com/drive/folders/1RDbQePqbMQzEY7Pc477fwRUNBOIJbuXp?usp=sharing
+
+`figshare`:
+
+https://figshare.com/articles/figure/bcSR/21155584
 
 ## How to train CARN?
 
@@ -41,7 +47,7 @@ See the commmand in `run.sh`. In fact, you only need to add some parameters to t
 
 ## Benchmark results in paper
 
-![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/2.png)
+![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/22.png)
 
 ![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/33.png)
 
@@ -110,3 +116,9 @@ This code does not provide a scheme to use other data for training, and all mult
 * 2022.8.25
   * Modify the dataset name: from `mcSR` to `bcSR`; 
   * Updated images of benchmark results.
+
+* 2022.11.17
+  * Updated all codes, added necessary comments, standardized functions; 
+  * Provides a new way to obtain bcSR: `figshare`;
+  * Updated benchmark results for quantitative evaluation;
+  * Adjusted the layout of the network structure diagram.
