@@ -2,9 +2,11 @@
 
 This repository is an official PyTorch implementation of the paper **"A Super-Resolution Network Using Channel Attention Retention for Pathology Images"**.
 
+https://peerj.com/articles/cs-1196/
+
 ![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/11.png)
 
-## Requirement
+# Requirement
 * torch == 1.8.0
 * python >=3.6.0
 * cuda == 11.1
@@ -16,7 +18,7 @@ See `requirement.txt` for other details of the operating environment.
 
 Note that for `opencv-python`, this code has only tried the version provided above. Using an excessively high version may cause errors.
 
-## Dataset: bcSR
+# Dataset: bcSR
 
 We have provided 3 urls for bcSR:
 
@@ -33,7 +35,7 @@ https://drive.google.com/drive/folders/1RDbQePqbMQzEY7Pc477fwRUNBOIJbuXp?usp=sha
 
 https://figshare.com/articles/figure/bcSR/21155584
 
-## How to train CARN?
+# How to train CARN?
 
 First, prepare the code and dataset. The download method of the data set has been provided. To place the code folder and data set in any path, you need to unzip the dataset.
 
@@ -41,61 +43,77 @@ Next, modify the parameters related to the dataset in `option.py`, specifically 
 
 You can find the commmand in `run.sh` that the benchmark result used.
 
-## How to test CARN?
+# How to test CARN?
 
 See the commmand in `run.sh`. In fact, you only need to add some parameters to the training command.
 
-## Benchmark results in paper
+# Benchmark results in paper
 
 ![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/22.png)
 
 ![](https://github.com/MoyangSensei/CARN-Pytorch/blob/main/fig/33.png)
 
-## Information of comparison model
+# Information of comparison model
 
 Some information about the comparison model used in the paper, including the source paper of the model, GitHub address and other conclusions.
 
-### bicubic
+## bicubic
 
 This can be easily found on the Internet.
 
-### SRCNN
+## SRCNN
 
 * paper: Accelerating the super-resolution convolutional neural network
 * code: https://github.com/yjn870/SRCNN-pytorch
 
 This code cannot run correctly on our device, and it does not provide 8x sampling schemes. We have modified some details on this basis.
 
-### SRGAN
+## SRGAN
 
 * paper: Photo-realistic single image super-resolution using a generative adversarial network
 * code: https://github.com/tensorlayer/srgan
 
 This code cannot run correctly on our device, and it does not provide 8x sampling schemes. We have modified some details on this basis.
 
-### EDSR
+## EDSR
 
 * paper: Enhanced deep residual networks for single image super-resolution
 * code: https://github.com/sanghyun-son/EDSR-PyTorch
 
 This code provides the implementation of EDSR, RDN and RCAN. The following models directly follow the content of this code.
 
-### RDN
+## RDN
 
 * paper: Residual dense network for image super-resolution
 * code: https://github.com/sanghyun-son/EDSR-PyTorch
 
-### RCAN
+## RCAN
 
 * paper: Image super-resolution using very deep residual channel attention networks
 * code: https://github.com/sanghyun-son/EDSR-PyTorch
 
-### SWD-Net
+## SWD-Net
 
 * paper: Joint spatial-wavelet dual-stream network for super-resolution
 * code: https://github.com/franciszchen/SWD-Net
 
 This code does not provide a scheme to use other data for training, and all multiples except 2x upsampling. We have asked questions in this code, and the author has now announced the method of making training data sets. We rewrite the feature upsampling part of this code in the way of CARN to realize the 3x, 4x and 8x upsampling tasks.
+
+# Cite
+
+If this work is helpful for your research, please consider citing the following BibTeX entry.
+
+```
+@article{jia2023super,
+  title={A super-resolution network using channel attention retention for pathology images},
+  author={Jia, Feiyang and Tan, Li and Wang, Ge and Jia, Caiyan and Chen, Zhineng},
+  journal={PeerJ Computer Science},
+  volume={9},
+  pages={e1196},
+  year={2023},
+  publisher={PeerJ Inc.}
+}
+```
 
 *****
 
@@ -122,3 +140,7 @@ This code does not provide a scheme to use other data for training, and all mult
   * Provides a new way to obtain bcSR: `figshare`;
   * Updated benchmark results for quantitative evaluation;
   * Adjusted the layout of the network structure diagram.
+
+* 2023.9.12
+  * Updated `About` and `CARN-PyTorch`: our paper was published by PeerJ Computer Science in 2023.1.17.
+  * Updated `Cite`: provide BibTeX for our paper.
